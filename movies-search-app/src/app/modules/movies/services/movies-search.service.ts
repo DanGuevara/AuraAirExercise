@@ -24,4 +24,14 @@ export class MoviesSearchService {
       map((result: IMoviesSearchResult) => new MoviesSearchResult(result)),
     );
   }
+
+  public getMovieByID(id: string): Observable<any> {
+    return this.httpClient.get<any>(END_POINT, {
+      params: {
+        i: id,
+        apikey: API_KEY,
+        plot: 'full',
+      }
+    });
+  }
 }

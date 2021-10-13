@@ -6,7 +6,6 @@ export interface IMovieSearchInfo {
   Poster: string;
 }
 
-
 export class MovieSearchInfo {
   public readonly title: string;
   public readonly year: string;

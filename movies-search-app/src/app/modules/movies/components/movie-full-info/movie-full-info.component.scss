@@ -1,0 +1,18 @@
+.movie-info {
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+
+  &__field {
+
+    &-text {
+      p {
+        align-self: start;
+      }
+      :first-child {
+        margin-right: 5px;
+        font-weight: bold;
+      }
+    }
+  }
+}

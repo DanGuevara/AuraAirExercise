@@ -11,6 +11,7 @@ import {MoviesListComponent} from './components/movies-list/movies-list.componen
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MovieCardComponent} from './components/movie-card/movie-card.component';
 import {MatCardModule} from '@angular/material/card';
+import { MovieFullInfoComponent } from './components/movie-full-info/movie-full-info.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import {MatCardModule} from '@angular/material/card';
     MoviesWrapperPageComponent,
     MoviesListComponent,
     MovieCardComponent,
+    MovieFullInfoComponent,
   ],
   imports: [
     CommonModule,

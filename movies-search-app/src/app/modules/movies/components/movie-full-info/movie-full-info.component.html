@@ -1,0 +1,15 @@
+<mat-grid-list cols="2" rowHeight="40px" class="movie-info">
+  <ng-container *ngIf="(movieFullInfo$ | async) as movieFullInfo">
+    <mat-grid-tile [rowspan]="12">
+      <img class="movie-card__image" [src]="movieFullInfo?.Poster" [alt]="movieFullInfo?.Title">
+    </mat-grid-tile>
+    <mat-grid-tile *ngFor="let key of getObjectKeys(movieFullInfo)" class="movie-info__field-text">
+      <p>{{ key + ':' }}</p>
+      <p>{{ movieFullInfo[key] }}</p>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="4" class="movie-info__field-text">
+      <p>Plot: </p>
+      <p>{{ movieFullInfo?.Plot }}</p>
+    </mat-grid-tile>
+  </ng-container>
+</mat-grid-list>
