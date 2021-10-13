@@ -1,0 +1,4 @@
+<app-movies-search-bar (searchUpdated)="onSearchUpdated($event)"></app-movies-search-bar>
+<div>
+  {{ (searchResults$ | async) | json }}
+</div>
