@@ -7,12 +7,18 @@ import {MatIconModule} from '@angular/material/icon';
 import {FormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {HttpClientModule} from '@angular/common/http';
+import {MoviesListComponent} from './components/movies-list/movies-list.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MovieCardComponent} from './components/movie-card/movie-card.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
   declarations: [
     MoviesSearchBarComponent,
-    MoviesWrapperPageComponent
+    MoviesWrapperPageComponent,
+    MoviesListComponent,
+    MovieCardComponent,
   ],
   imports: [
     CommonModule,
@@ -21,6 +27,8 @@ import {HttpClientModule} from '@angular/common/http';
     FormsModule,
     MatButtonModule,
     HttpClientModule,
+    MatGridListModule,
+    MatCardModule,
   ]
 })
 export class MoviesModule {
