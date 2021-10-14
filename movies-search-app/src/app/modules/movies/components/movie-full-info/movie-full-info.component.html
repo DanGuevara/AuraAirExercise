@@ -1,7 +1,7 @@
 <mat-grid-list cols="2" rowHeight="38px" class="movie-info">
   <ng-container *ngIf="(movieFullInfo$ | async) as movieFullInfo">
     <mat-grid-tile [rowspan]="12">
-      <img class="movie-card__image" [src]="movieFullInfo?.Poster" [alt]="movieFullInfo?.Title">
+      <img class="movie-card__image" [src]="getImageUrl(movieFullInfo?.Poster)" [alt]="movieFullInfo?.Title">
     </mat-grid-tile>
     <mat-grid-tile *ngFor="let key of getObjectKeys(movieFullInfo)" class="movie-info__field-text">
       <p>{{ key + ':' }}</p>

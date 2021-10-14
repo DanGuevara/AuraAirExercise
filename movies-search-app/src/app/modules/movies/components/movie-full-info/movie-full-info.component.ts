@@ -37,4 +37,14 @@ export class MovieFullInfoComponent implements OnInit {
     const excludedKeys: Array<string> = ['Plot', 'Poster', 'Ratings', 'Response', 'imdbID'];
     return object ? Object.keys(object).filter((key) => !excludedKeys.includes(key)) : [];
   }
+
+  public getImageUrl(url: string): string {
+    try {
+      const result = new URL(url);
+    } catch (err) {
+      return '/assets/noImageAvailable.jpg';
+    }
+
+    return url;
+  }
 }
