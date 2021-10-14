@@ -14,11 +14,12 @@ export class MoviesSearchService {
   constructor(private httpClient: HttpClient) {
   }
 
-  public searchMoviesByTitle(title: string): Observable<MoviesSearchResult> {
+  public searchMoviesByTitle(title: string, page: number = 0): Observable<MoviesSearchResult> {
     return this.httpClient.get<IMoviesSearchResult>(END_POINT, {
       params: {
         s: title,
         apikey: API_KEY,
+        page: page > 0 ? page.toString() : '1',
       }
     }).pipe(
       map((result: IMoviesSearchResult) => new MoviesSearchResult(result)),

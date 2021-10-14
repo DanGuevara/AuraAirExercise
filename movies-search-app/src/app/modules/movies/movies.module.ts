@@ -12,6 +12,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MovieCardComponent} from './components/movie-card/movie-card.component';
 import {MatCardModule} from '@angular/material/card';
 import { MovieFullInfoComponent } from './components/movie-full-info/movie-full-info.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { MovieFullInfoComponent } from './components/movie-full-info/movie-full-
     HttpClientModule,
     MatGridListModule,
     MatCardModule,
+    MatPaginatorModule,
   ]
 })
 export class MoviesModule {

@@ -1,2 +1,8 @@
 <app-movies-search-bar (searchUpdated)="onSearchUpdated($event)"></app-movies-search-bar>
 <app-movies-list [movies]="searchResults$ | async"></app-movies-list>
+<mat-paginator *ngIf="!!(resultLength$ | async)"
+               [length]="resultLength$ | async"
+               pageSize="10"
+               (page)="onPageUpdated($event)"
+               aria-label="Select page">
+</mat-paginator>
