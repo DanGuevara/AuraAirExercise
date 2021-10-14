@@ -18,6 +18,16 @@ export class MovieSearchInfo {
     this.year = data.Year;
     this.imdbID = data.imdbID;
     this.type = data.Type;
-    this.poster = data.Poster;
+    this.poster = MovieSearchInfo.isValidUrl(data.Poster) ? data.Poster : '/assets/noImageAvailable.jpg';
+  }
+
+  private static isValidUrl(url: string): boolean {
+    try {
+      const result = new URL(url);
+    } catch (err) {
+      return false;
+    }
+
+    return true;
   }
 }

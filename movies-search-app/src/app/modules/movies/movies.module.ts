@@ -4,7 +4,7 @@ import {MoviesSearchBarComponent} from './components/movies-search-bar/movies-se
 import {MoviesWrapperPageComponent} from './components/movies-wrapper-page/movies-wrapper-page.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {HttpClientModule} from '@angular/common/http';
 import {MoviesListComponent} from './components/movies-list/movies-list.component';
@@ -13,6 +13,7 @@ import {MovieCardComponent} from './components/movie-card/movie-card.component';
 import {MatCardModule} from '@angular/material/card';
 import { MovieFullInfoComponent } from './components/movie-full-info/movie-full-info.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -33,6 +34,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatGridListModule,
     MatCardModule,
     MatPaginatorModule,
+    ReactiveFormsModule,
+    MatSnackBarModule,
   ]
 })
 export class MoviesModule {
